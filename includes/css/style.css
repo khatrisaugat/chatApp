@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.card {
+  background-color: #222;
+  color: #fff;
+}
+#login-bg {
+  background-image: url(../../files/backgroung.jpg);
+}
+.login-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.login-card {
+  padding: 2rem 2rem;
+  background: hsla(0, 0%, 100%, 0.25) border-box;
+  /* opacity: 0.8; */
+  overflow: hidden;
+  box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 0.3) inset,
+    0 0.5em 1em rgba(0, 0, 0, 0.6);
+  text-shadow: 0 1px 1px hsla(0, 0%, 100%, 0.3);
+  backdrop-filter: blur(2rem);
+}
+.log-in {
+  background: linear-gradient(
+    to right bottom,
+    #3f265e,
+    #603d7e,
+    #a865ad,
+    #ac67b0
+  );
+  /* background-color: aqua; */
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  font-weight: 600;
+  color: #fff;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.user-image {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 1px solid aqua;
+}
+.message-show {
+  min-height: 60vh;
+}
+.message-input {
+  position: fixed;
+  bottom: 10vh;
+  /* left: 40%; */
+  width: 63.5%;
+  right: 2%;
+  /* background-color: #000; */
+}
+.new-user {
+  min-height: 10vh;
+}
+.friend-list {
+  overflow-y: scroll;
+  height: 70vh;
+}
