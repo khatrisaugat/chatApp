@@ -7,12 +7,12 @@ if (isset($_POST['login'])) {
     $email = $_POST['email'];
     $password = md5($_POST['password']);
     $user_select = $obj->Query("SELECT * FROM user WHERE email='$email' and password='$password'");
-
+    // $user_select = $obj->Select("user", "*", 'email', array($email), " AND password='$password'");
     if ($user_select) {
         $user_select = $user_select[0];
         session_start();
         $_SESSION['users_data'] = $user_select;
-        $_SESSION['id'] = $user_select->id;
+        $_SESSION['uid'] = $user_select['uid'];
         $_SESSION['status'] = "Success";
         $_SESSION['login'] = 'yes';
         header('Location:' . base_url());

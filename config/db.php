@@ -109,7 +109,7 @@ class Database
         $preStatement = $this->_connection->prepare($query);
         try {
             $preStatement->execute([]);
-            return $preStatement->fetchAll(PDO::FETCH_CLASS);
+            return $preStatement->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $exception) {
             die($exception->getMessage());
         }

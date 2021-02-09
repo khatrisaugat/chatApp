@@ -8,6 +8,10 @@
     <title>Chat Application</title>
     <link rel="stylesheet" href="./includes/css/bootstrap.min.css">
     <link rel="stylesheet" href="./includes/css/style.css">
+    <script>
+        //root url for js
+        let js_urls = "<?php echo base_url(); ?>";
+    </script>
     <script src="./includes/js/jquery-3.4.1.min.js"></script>
 </head>
 
